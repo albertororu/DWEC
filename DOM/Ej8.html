@@ -22,7 +22,7 @@
         </select>
     </p>
     <p>
-        <input type="button" value="Operar" id="calculo" />
+        <input type="button" value="Operar" id="calculo" onclick="operacion()" />
     </p>
     <p id="resultado1"></p>
     <select multiple="multiple" id="operaciones">
@@ -34,5 +34,48 @@
     </p>
     <p id="resultado2"></p>
 </body>
+<script>
 
+function operacion() {
+    let numeroUno = document.getElementById("valor1").value;
+    let numeroDos = document.getElementById("valor2").value;
+    let parrafo = document.createElement("p");
+    let operacion = document.getElementById("operacion").value;
+
+    if (operacion == "suma") {
+        let suma = parseInt(numeroUno) + parseInt(numeroDos);
+        let contenido = document.createTextNode("La suma es de: " + suma);
+        parrafo.appendChild(contenido);
+        document.body.appendChild(parrafo);
+    } else if (operacion == "resta") {
+        let resta = parseInt(numeroUno) - parseInt(numeroDos);
+        let contenido = document.createTextNode("La resta es de: " + resta);
+        parrafo.appendChild(contenido);
+        document.body.appendChild(parrafo);
+
+    }
+
+    document.getElementById('calculomultiple').addEventListener('click', function () {
+        let valor1 = parseFloat(document.getElementById('valor1').value);
+        let valor2 = parseFloat(document.getElementById('valor2').value);
+        let operaciones = document.getElementById('operaciones');
+        let resultado = 0;
+
+        for (let i = 0; i < operaciones.options.length; i++) {
+            if (operaciones.options[i].selected) {
+                let operacion = operaciones.options[i].value;
+                if (operacion === 'suma') {
+                    resultado += valor1 + valor2;
+                } else if (operacion === 'resta') {
+                    resultado += valor1 - valor2;
+                }
+            }
+        }
+
+        document.getElementById('resultado2').textContent = "Resultado: " + resultado;
+    });
+
+    
+  }
+</script>
 </html>
