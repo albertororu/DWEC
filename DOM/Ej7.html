@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ej7</title>
+</head>
+
+<body>
+  <p>
+    <label for="valor1">Ingrese primer valor:</label>
+    <input type="number" id="valor1" />
+  </p>
+  <p>
+    <label for="valor2">Ingrese segundo valor:</label>
+    <input type="number" id="valor2" />
+  </p>
+  <p>
+    <input type="checkbox" id="suma" />Sumar
+  </p>
+  <p>
+    <input type="checkbox" value="resta" id="resta" />Restar
+  </p>
+  <p>
+    <input type="button" value="Operar" id="calculo" onclick="operacion()" />
+  </p>
+  <p id="resultado"></p>
+
+</body>
+
+<script>
+
+  function operacion() {
+    let numeroUno = document.getElementById("valor1").value;
+    let numeroDos = document.getElementById("valor2").value;
+    let parrafo = document.createElement("p");
+
+    if (document.getElementById("suma").checked) {
+      let suma = parseInt(numeroUno) + parseInt(numeroDos);
+      let contenido = document.createTextNode("La suma es " + suma);
+      parrafo.appendChild(contenido);
+    }
+
+    if (document.getElementById("resta").checked) {
+      let resta = parseInt(numeroUno) - parseInt(numeroDos);
+      let contenido = document.createTextNode(" - La resta es " + resta);
+      parrafo.appendChild(contenido);
+    }
+
+    document.body.appendChild(parrafo);
+  }
+
+</script>
+
+</html>

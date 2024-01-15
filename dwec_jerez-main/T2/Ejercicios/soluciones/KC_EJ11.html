@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>KC_EJ11</title>
+  </head>
+  <body>
+  <!--La siguiente código presenta una opción de solución mínima viable usando las entradas/salidas de JS por cliente: prompt y alert. Sin embargo, el mismo resutado puede ser alcanzado usando controles input, eventos y DOM, o JQuery, o un enfoque funcional. Utiliza con el que prefieras practicar. Si tienes dudas consulta a tu instructor de JS o a tu coach. 
+  -->
+  <script type="text/javascript">
+  		/*
+			KC_EJ11
+      Crear un programa que reciba 3 números e indique cuál es el mayor y el menor.
+  		*/
+
+      let mayor;
+      let menor;
+
+     let num1 = parseInt(prompt('Dime un primer numero:'));
+     let num2 = parseInt(prompt('Dime un segundo numero:')); 
+     let num3 = parseInt(prompt('Dime un tercer numero:'));
+
+     if(num1 > num2 && num1 > num3 ){
+         mayor= num1;
+     }
+     else if(num2 > num1 && num2 > num3){
+      mayor = num2
+     }
+     else {
+      mayor = num3;
+     }
+
+     if(num1 < num2 && num1 < num3 ){
+         menor= num1;
+     }
+     else if(num2 < num1 && num2 < num3){
+      menor = num2
+     }
+     else {
+      menor = num3;
+     }
+
+     document.write('El numero mayor es ' + mayor + ' y el numero menor es ' + menor);
+     
+  </script>
+  </body>
+</html>

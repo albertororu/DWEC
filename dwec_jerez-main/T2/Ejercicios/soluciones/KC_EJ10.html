@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>KC_EJ10</title>
+  </head>
+  <body>
+  <!--La siguiente código presenta una opción de solución mínima viable usando las entradas/salidas de JS por cliente: prompt y alert. Sin embargo, el mismo resutado puede ser alcanzado usando controles input, eventos y DOM, o JQuery, o un enfoque funcional. Utiliza con el que prefieras practicar. Si tienes dudas consulta a tu instructor de JS o a tu coach. 
+  -->
+  <script type="text/javascript">
+  		/*
+			KC_EJ10
+      Crear un programa que reciba un número del 1 al 7 y muestre el nombre de la película StarWars correspondiente.
+
+  		*/
+  	   
+        let numero = parseInt(prompt('Que pelicula de Star Wars quieres selecionar: '));
+
+        switch(numero) {
+            case 1:
+            document.write("La primera pelicula es La Amenaza fantasma ")
+        break;
+
+        case 2:
+            document.write("La segunda pelicula es El Ataque de los Clones ")
+        break;
+
+        case 3:
+            document.write("La tercera pelicula es La Venganza de los Sith ")
+        break;
+
+        case 4:
+            document.write("La cuarta pelicula es Una nueva esperanza ")
+        break;
+
+        case 5:
+            document.write("La quinta pelicula es El imperio contraataca ")
+        break;
+
+        case 6:
+            document.write("La sexta pelicula es El Retorno del Jedi ")
+        break;
+
+        case 7:
+            document.write("La septima pelicula es El Despertar de la Fuerza ")
+        break;
+
+        default: 
+            document.write("No has selecionado ningun numero");
+        }
+        
+  </script>
+  </body>
+</html>
