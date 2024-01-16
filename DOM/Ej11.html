@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej11</title>
+</head>
+
+<body>
+    <h2>Numeros:</h2>
+    <button onclick="pulsar()" id="numero"> Nuevo número </button>
+</body>
+<script>
+    function pulsar() {
+        let numero = document.getElementById("numero");
+        let aleatorio = Math.floor(Math.random() * 100) + 1;
+
+        let elementoLista = document.createElement('li');
+        elementoLista.textContent = aleatorio;
+        document.getElementById('numero').appendChild(elementoLista);
+    }
+</script>
+
+</html>

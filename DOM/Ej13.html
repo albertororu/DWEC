@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej13</title>
+</head>
+
+<body>
+
+    <button onclick="marcar()">Marcar todos</button>
+    <button onclick="desmarcar()">Desmarcar todos</button>
+    <div id="checkbox"></div>
+</body>
+<script>
+
+    function numerosAleatorios() {
+        return Math.floor(Math.random() *(100)) + 1;
+    }
+    function crearCheckbox() {
+        const crea = document.getElementById("checkbox");
+        for (let i = 0; i < 100; i++) {
+            const nuevoCheck = document.createElement("input");
+            nuevoCheck.type = "checkbox";
+            nuevoCheck.id = "checkbox" + i;
+
+            const label = document.createElement("label");
+            label.htmlFor = "checkbox" + i;
+            label.textContent = numerosAleatorios(1, 100);
+
+            crea.appendChild(nuevoCheck);
+            crea.appendChild(label);
+            crea.appendChild(document.createElement('br'));
+        }
+    }
+
+    function marcar(){
+        let marca = document.querySelectorAll("input[type='checkbox']");
+        marca.forEach(checkbox=>{
+            checkbox.checked=true;
+        });
+    }
+
+    function desmarcar(){
+        let marca = document.querySelectorAll("input[type='checkbox']");
+        marca.forEach(checkbox=>{
+            checkbox.checked=false;
+        });
+    }
+
+    window.onload = crearCheckbox;
+</script>
+
+</html>

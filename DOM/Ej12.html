@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Casi Primos</title>
+    <style>
+        /* Estilo para resaltar celdas con fondo amarillo */
+        .casiPrimo {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="calcularCasiPrimos()">Calcular número casi primos</button>
+    <table id="tabla"></table>
+
+    <script>
+        // Función para generar la tabla de 100x100
+        function generarTabla() {
+            const tabla = document.getElementById('tabla');
+
+            for (let i = 1; i <= 100; i++) {
+                const fila = document.createElement('tr');
+
+                for (let j = 1; j <= 100; j++) {
+                    const celda = document.createElement('td');
+                    const numero = (i - 1) * 100 + j; // Calcular el número único
+                    celda.textContent = numero;
+                    fila.appendChild(celda);
+                }
+
+                tabla.appendChild(fila);
+            }
+        }
+
+        // Función para verificar si un número es casi primo
+        function esCasiPrimo(numero) {
+            if (numero < 2) {
+                return false;
+            }
+
+            let divisores = 0;
+
+            for (let i = 1; i <= numero; i++) {
+                if (numero % i === 0) {
+                    divisores++;
+                    if (divisores > 2) {
+                        return false;
+                    }
+                }
+            }
+
+            return true;
+        }
+
+        // Función para resaltar celdas casi primas
+        function calcularCasiPrimos() {
+            const celdas = document.querySelectorAll('#tabla td');
+
+            celdas.forEach(celda => {
+                const numero = parseInt(celda.textContent);
+                if (esCasiPrimo(numero)) {
+                    celda.classList.add('casiPrimo');
+                } else {
+                    celda.classList.remove('casiPrimo');
+                }
+            });
+        }
+
+        // Generar la tabla al cargar la página
+        generarTabla();
+    </script>
+</body>
+</html>

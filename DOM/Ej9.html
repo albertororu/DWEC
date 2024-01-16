@@ -18,5 +18,14 @@
       <span id="resultado">50</span>
     </p>
   </body>
-  
+  <script>
+    document.getElementById('comentarios').addEventListener('input', function(){
+    let contador = document.getElementById("resultado");
+    let comentarios = document.getElementById("comentarios");
+    let caracter = parseInt(comentarios.getAttribute('maxlength'));
+    let caracterIngresado = comentarios.value.length;
+    let resto = caracter - caracterIngresado;
+    contador.textContent = resto; 
+    });
+  </script>
   </html>
