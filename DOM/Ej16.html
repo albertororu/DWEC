@@ -15,14 +15,12 @@
             let insertar = document.getElementById('primero')
             let nuevoParrafo = document.createElement("p")
             nuevoParrafo.textContent = numerosAleatorios(1, 100)
-            insertar.appendChild(nuevoParrafo)
-            insertar.innerHTML = '<p>' + nuevoParrafo.textContent + '</p>';
+            insertar.replaceChildren(nuevoParrafo)
 
             let insertar1 = document.getElementById('segundo')
             let nuevoParrafo1 = document.createElement("p")
             nuevoParrafo1.textContent = numerosAleatorios(1, 100)
-            insertar1.appendChild(nuevoParrafo1)
-            insertar1.innerHTML = '<p>' + nuevoParrafo1.textContent + '</p>';
+            insertar1.replaceChildren(nuevoParrafo1)
 
         }
 
