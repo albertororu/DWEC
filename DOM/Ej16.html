@@ -1,40 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ej 16</title>
     <script type="text/javascript">
-        function genera() {
-        
+
+        function numerosAleatorios() {
+            return Math.floor(Math.random() * (100)) + 1;
         }
-        
+        function genera() {
+            let insertar = document.getElementById('primero')
+            let nuevoParrafo = document.createElement("p")
+            nuevoParrafo.textContent = numerosAleatorios(1, 100)
+            insertar.appendChild(nuevoParrafo)
+            insertar.innerHTML = '<p>' + nuevoParrafo.textContent + '</p>';
+
+            let insertar1 = document.getElementById('segundo')
+            let nuevoParrafo1 = document.createElement("p")
+            nuevoParrafo1.textContent = numerosAleatorios(1, 100)
+            insertar1.appendChild(nuevoParrafo1)
+            insertar1.innerHTML = '<p>' + nuevoParrafo1.textContent + '</p>';
+
+        }
+
         function compara() {
-        
+            let numeroUno = document.getElementById('primero').textContent
+            let numeroDos = document.getElementById('segundo').textContent
+            let resultado = document.getElementById('resultado')
+            let parrafo = document.createElement('p')
+
+
+            if (parseInt(numeroUno) > parseInt(numeroDos)) {
+                parrafo.textContent = numeroUno
+                resultado.appendChild(parrafo)
+            } else if (parseInt(numeroUno) < parseInt(numeroDos)) {
+                parrafo.textContent = numeroDos
+                resultado.appendChild(parrafo)
+            }
+            resultado.innerHTML = '<p>' + parrafo.textContent + '</p>'
+
         }
     </script>
-        
+
     <style type="text/css">
-        #primero, #segundo, #resultado {width: 150px; height: 150px; border: thin solid silver; background: #F5F5F5; float: left; margin:20px; font-size: 6em; color: #333; text-align: center; padding: 5px; font-family:Arial, Helvetica, sans-serif;}
-        #primero p, #segundo p, #resultado p {margin:.2em 0;}
-        #resultado {margin-left:1.3em; border-color: black;}
-        .clear {clear:both;}
-        #compara {margin-left:11em;}
-        #genera {font-size:1.2em; margin-left:8em;}
+        #primero,
+        #segundo,
+        #resultado {
+            width: 150px;
+            height: 150px;
+            border: thin solid silver;
+            background: #F5F5F5;
+            float: left;
+            margin: 20px;
+            font-size: 6em;
+            color: #333;
+            text-align: center;
+            padding: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #primero p,
+        #segundo p,
+        #resultado p {
+            margin: .2em 0;
+        }
+
+        #resultado {
+            margin-left: 1.3em;
+            border-color: black;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        #compara {
+            margin-left: 11em;
+        }
+
+        #genera {
+            font-size: 1.2em;
+            margin-left: 8em;
+        }
     </style>
-</head>   
+</head>
+
 <body>
-        <input id="genera" type="button" value="¡¡ Genera !!" onclick="genera()" />
-        
-        <div id="primero"></div>
-        
-        <div id="segundo"></div>
-        
-        <div class="clear"></div>
-        
-        <input id="compara" type="button" value="<< Comparar >>" onclick="compara()" />
-        
-        <div id="resultado"></div>
+    <input id="genera" type="button" value="¡¡ Genera !!" onclick="genera()" />
+
+    <div id="primero"></div>
+
+    <div id="segundo"></div>
+
+    <div class="clear"></div>
+
+    <input id="compara" type="button" value="<< Comparar >>" onclick="compara()" />
+
+    <div id="resultado"></div>
 </body>
+
 </html>

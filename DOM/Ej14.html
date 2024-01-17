@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej14</title>
+</head>
+
+<body>
+    <p onclick="desaparecer(event)" ondblclick="eliminar(event)">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla
+        officia minima autem ducimus dolor. Eos pariatur iste reprehenderit mollitia amet. Praesentium, suscipit? Quas
+        voluptate vitae accusamus, sed labore quisquam? Unde.</p>
+    <p onclick="desaparecer(event)" ondblclick="eliminar(event)">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
+        sint architecto fuga impedit autem rem quibusdam, porro fugit iste natus qui unde sapiente officiis accusamus
+        repellendus delectus? Atque, officiis porro!</p>
+    <p onclick="desaparecer(event)" ondblclick="eliminar(event)">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic
+        facere, eum nulla sit amet incidunt excepturi sint corrupti optio voluptatum perspiciatis dignissimos aperiam
+        veniam suscipit, itaque quam, harum vero sequi.</p>
+    <button onclick="reaparecer()" id="reaparecer">Reaparecer</button>
+</body>
+
+<script>
+    function desaparecer(event) {
+        event.target.style.display = 'none';
+    }
+
+    function eliminar(event) {
+        var desaparece = event.target
+        desaparece.parentNode.removeChild(desaparece)
+    }
+
+
+    function reaparecer() {
+        let reaparecer = document.querySelectorAll("p")
+        reaparecer.forEach(function (elemento) {
+            elemento.style.display = '';
+        })
+    }
+
+</script>
+
+</html>
