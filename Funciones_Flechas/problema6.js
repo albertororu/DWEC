@@ -7,7 +7,7 @@ let crearAprendiz = (nombre, planeta,edad,estatura,clasificarAprendiz)=>{
     
     
     }
-    crearAprendiz('Alejo','tierra',14,1.63, function(clasifiaccion){
+    crearAprendiz ('Alejo','tierra',14,1.63, let=(clasifiaccion)=>{
         if(clasifiaccion.edad>=15){
             console.log('Usted se va para la clase sable de luz')
         }else{

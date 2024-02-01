@@ -4,7 +4,7 @@ let filtrarPlanos = (planos, arrancarNave)=>{
      arrancarNave(filtro)
  }
  let planos=[1,100,200,400,500]
- filtrarPlanos(planos, function(filtro){
+ filtrarPlanos(planos, let = (filtro)=>{
      let cuenta=filtro.length
      
  
@@ -15,4 +15,3 @@ let filtrarPlanos = (planos, arrancarNave)=>{
      }
     
  })
- 
