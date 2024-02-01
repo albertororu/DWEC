@@ -15,3 +15,4 @@ let filtrarPlanos = (planos, arrancarNave)=>{
      }
     
  })
+ 
