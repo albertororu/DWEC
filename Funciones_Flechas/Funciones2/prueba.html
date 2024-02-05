@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     const numeroBinario = decimal => {
+    let num = decimal;
+    let entero = ''
+    while(num > 0){
+        entero = (num % 2) + entero;
+        num = Math.floor(num / 2);
+    }
+    return entero;
+}
+const numeroDecimal = 39;
+const resultadoBinario = numeroBinario(numeroDecimal);
+document.write(resultadoBinario)
+    </script>
+</body>
+</html>
