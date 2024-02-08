@@ -1,9 +1,11 @@
-const numeroBinario = valor => {
-    let num = valor;
-    let entero
-    while(num > 0){
-        entero = (num % 2) + entero;
-        num = Math.floor(num / 2);
+const numeroBinario = (valor)=> {
+    let entero = ''
+    while(valor > 0){
+        entero = (valor % 2) + entero;
+        valor = Math.floor(valor / 2);
     }
+    
+    return entero
 }
-numeroBinario(15)
+let total = numeroBinario(15);
+console.log(total)
