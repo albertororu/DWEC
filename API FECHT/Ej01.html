@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Personajes de Star Wars</title>
+</head>
+<body>
+    <h1>Lista de Personajes de Star Wars</h1>
+    <ul id="lista">
+        <!-- Aquí se agregarán los elementos de la lista dinámicamente -->
+    </ul>
+
+    <script>
+        // Hacer la petición a la API de SWAPI
+        fetch('https://swapi.dev/api/people/')
+            .then(response => response.json())
+            .then(data => {
+                
+                const personajes = data.results;
+                
+                const lista = document.getElementById('lista');
+
+                personajes.forEach(personaje => {
+                    const li = document.createElement('li');
+                    li.textContent = personaje.name;
+                    lista.appendChild(li);
+                });
+            })
+            .catch(error => console.log('Solicitud fallida', error));
+    </script>
+</body>
+</html>

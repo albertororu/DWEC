@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="descripcion">Descripcion del articulo</label>
+        <input type="text" name="descripcion" id="descripcion">
+
+        <label for="precio">Precio</label>
+        <input type="number" name="precio" id="precio">
+        <button type="button" class="btn btn-primary" onclick="insertarProducto()">Insertar</button>
+
+    </form>
+    <table id="tabla">
+        <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+            </tr>
+        </thead>
+        <tbody id="tabla-body"></tbody>
+    </table>
+
+    <script>
+        function obtenerProductos() {
+            const productosString = localStorage.getItem('productos');
+            return productosString ? JSON.parse(productosString) : [];
+        }
+
+        function guardarProductos(productos) {
+            localStorage.setItem('productos', JSON.stringify(productos));
+        }
+
+        function mostrarProductos() {
+            const productos = obtenerProductos();
+            const tablaBody = document.getElementById('tabla-body');
+            tablaBody.innerHTML = '';
+            productos.forEach(producto => {
+                const fila = `
+                    <tr>
+                        <td>${producto.codigo}</td>
+                        <td>${producto.descripcion}</td>
+                        <td>${producto.precio}</td>
+                    </tr>
+                `;
+                tablaBody.innerHTML += fila;
+            });
+        }
+
+        function limpiarFormulario() {
+            document.getElementById('descripcion').value = '';
+            document.getElementById('precio').value = '';
+        }
+
+        function insertarProducto() {
+            const descripcion = document.getElementById('descripcion').value;
+            const precio = document.getElementById('precio').value;
+
+            let productos = obtenerProductos();
+            const nuevoProducto = {
+                codigo: productos.length + 1,
+                descripcion: descripcion,
+                precio: precio
+            };
+            productos.push(nuevoProducto);
+            guardarProductos(productos);
+            mostrarProductos();
+            limpiarFormulario();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            mostrarProductos();
+        });
+
+        fetch('http://localhost:3000/articulo')
+            .then(response => response.json())
+            .catch(error => console.log('Solicitud fallida', error));
+    </script>
+</body>
+</html>
