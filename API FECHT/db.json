@@ -1,0 +1,32 @@
+{
+  "articulo": [
+    {
+      "codigo": 1,
+      "descripcion": "papas",
+      "precio": 23,
+      "id": "5e29"
+    },
+    {
+      "codigo": 2,
+      "descripcion": "peras",
+      "precio": 18,
+      "id": "86bd"
+    },
+    {
+      "codigo": 3,
+      "descripcion": "manzanas",
+      "precio": 55,
+      "id": "84d5"
+    },
+    {
+      "id": "b99e",
+      "descripcion": "zanahorias",
+      "precio": "3"
+    },
+    {
+      "id": "0503",
+      "descripcion": "pan",
+      "precio": "1"
+    }
+  ]
+}

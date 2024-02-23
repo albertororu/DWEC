@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Geolocalización</title>
+</head>
+<body>
+    <h1>Información de Geolocalización</h1>
+    <ul id="listaLlena">
+        <!-- Aquí se mostrará la información -->
+    </ul>
+
+    <script>
+        fetch('https://freegeoip.app/json/')
+            .then(response => response.json())
+            .then(data => {
+               const infoList = document.getElementById('listaLlena');
+               const nombre = document.createElement('li');
+               nombre.textContent = `País: ${data.country_name}`;
+               infoList.appendChild(nombre);
+            })
+            .catch(error => console.error('Hubo un problema con la solicitud fetch:', error));
+    </script>
+</body>
+</html>
