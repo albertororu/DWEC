@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Boton from "../Calculadora/Boton";
 import Pantalla from "../Calculadora/Pantalla";
 import BotonClear from "../Calculadora/BotonClear";
@@ -61,3 +62,16 @@ function About() {
   }
   
   export default About;
+=======
+import React from "react";
+import Carousel from "./Carousel/Carousel";
+const About = () => {
+  return(
+    <div>
+      <h1>Hola Usuario</h1>
+      <Carousel/>
+    </div>
+  )
+}
+export default About
+>>>>>>> 8587f2557234f742f6ac9a96eb0f744bae4cfb7e

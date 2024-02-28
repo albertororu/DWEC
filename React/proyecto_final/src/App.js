@@ -21,4 +21,11 @@ function App() {
     
   );
 }
-export default App;
+
+import { BrowserRouter as Router, Link, Routes, Route } from "react-router-dom";
+import AltaDeUsuario from "./Componentes/AltaDeUsuario";
+import About from "./Componentes/About";
+import Inicio from "./Componentes/Inicio";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+

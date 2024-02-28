@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import Inicio from "./Inicio";
 import "../Hojas-de-estilo/AltaDeUsuario.css"
@@ -44,3 +45,15 @@ function AltaDeUsuario() {
 }
 
 export default AltaDeUsuario;
+=======
+import React from "react";
+
+const AltaDeUsuario = () => (
+  <div>
+    <h1>Hello, I'm Gallery component</h1>
+    
+  </div>
+);
+
+export default AltaDeUsuario; 
+>>>>>>> 8587f2557234f742f6ac9a96eb0f744bae4cfb7e
