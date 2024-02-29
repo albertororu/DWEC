@@ -1,8 +1,17 @@
-import React from "react";
 
-const Inicio = () => {
-    return (
-<h1>Hello, I'm Home component</h1>
-    );
+import Carousel from '../Carousel/Carousel'
+import React from 'react'
+import Footer from './Footer'
+
+function Inicio() {
+  return (
+    <div>
+      <Carousel/>
+      <h1>Bienvenido usuario</h1>
+      <Footer/>
+    </div>
+    
+  )
 }
-export default Inicio;
+
+export default Inicio
