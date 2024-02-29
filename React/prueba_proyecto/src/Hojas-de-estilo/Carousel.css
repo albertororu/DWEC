@@ -1,0 +1,8 @@
+.carousel-item img {
+    height: 300px; 
+    object-fit:cover;
+    padding: 5px;
+    margin-right: 5px;
+  
+}
+
