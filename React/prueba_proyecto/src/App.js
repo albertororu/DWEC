@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import AltaDeUsuario from "./Componentes/AltaDeUsuario";
-import About from "./Componentes/About"
+import About from "./Componentes/About";
 import Inicio from "./Componentes/Inicio";
 import Error from "./Componentes/Error";
-import NavBar from "./Componentes/Navbar"
+import NavBar from "./Componentes/NavBar";
 import "./App.css";
 function App() {
   return (
