@@ -1,0 +1,43 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nombreUsuario": "usuario1",
+      "contrasena": "contrasena1"
+    },
+    {
+      "id": "b00e",
+      "nombre": "alberto",
+      "email": "",
+      "contraseña": "alberto16"
+    },
+    {
+      "id": "58ac",
+      "nombre": "alberto",
+      "email": "",
+      "contraseña": "alberto16"
+    },
+    {
+      "id": "fa28",
+      "nombre": "alberto",
+      "email": "",
+      "contraseña": "alberto16"
+    },
+    {
+      "id": "e28d",
+      "nombre": "alberto",
+      "email": "",
+      "contraseña": "alberto16"
+    },
+    {
+      "id": "a4c3",
+      "nombre": "rosa",
+      "contraseña": "rosa10"
+    },
+    {
+      "id": "d884",
+      "nombreUsuario": "manuel",
+      "contrasena": "manuel1234"
+    }
+  ]
+}

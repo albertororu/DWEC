@@ -1,0 +1,9 @@
+{
+"usuarios": [
+    {
+        "id":1,
+        "nombreUsuario":"usuario1",
+        "contrasena":"contrasena1"
+    }
+]
+}

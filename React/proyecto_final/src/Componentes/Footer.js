@@ -1,5 +1,4 @@
 import React from 'react'
-import Logo from "../Imagenes/Logo_Proyecto.png"
 import Github from "../Imagenes/github.png"
 import Linkedin from "../Imagenes/linkedin.png"
 import Correo from "../Imagenes/correo-electronico.png"

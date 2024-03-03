@@ -1,7 +1,9 @@
-
 import Carousel from '../Carousel/Carousel'
 import React from 'react'
 import Footer from './Footer'
+
+
+
 
 function Inicio() {
   return (
@@ -15,3 +17,5 @@ function Inicio() {
 }
 
 export default Inicio
+
+
